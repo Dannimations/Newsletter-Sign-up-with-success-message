@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&family=Young+Serif&display=swap');
+
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    --ff: 'Roboto', 'Segoe UI';
+
+}
+
+body{
+    font-size: 16px;
+    @media (min-width: 800px){
+        background-color: var(--Dark-Slate-Grey);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+    }
+}
+
+*{
+    font-family: var(--ff);
+}
+
+
+.mainContainer{
+    @media (min-width: 800px){
+        width: 50%;
+        height: 10%;
+        background-color: var(--White);
+        display: flex;
+        flex-direction: row-reverse;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 1rem;
+    }
+}
+
+p{
+    color: grey;
+}
+
+span{
+    color: black;
+}
+
+.picture{
+    width: 100%;
+    @media (max-width: 450px){
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 50vh;
+    }
+    @media (min-width: 800px){
+        width: 50%;
+        background-image: url(assets/images/illustration-sign-up-desktop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: .9rem;
+        /* border: 1px solid; */
+    }
+}
+
+@media (min-width: 800px){
+    .everythingElse{
+        width: 70%;
+    }
+}
+
+.list{
+    display: flex;
+    gap: 1rem;
+}
+
+input, button{
+    height: 3rem;
+    border-radius: .5rem;
+}
+input{
+    width: 90%;
+    border: none;
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+}
+
+.incorrect{
+    border: 1px solid var(--Tomato);
+}
+
+.incorrect::placeholder{
+    color: var(--Tomato);
+}
+
+button{
+    width: 96%;
+    margin-top: 2rem;
+    border: none;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    font-weight: 700;
+}
+
+#errorMessage{
+    color: var(--Tomato);
+    text-align: right;
+    margin-right: 1.5rem;
+    margin-top: -2.4rem;
+}
+
+.success{
+    display: none;
+}
+
+.show{
+    display: block;
+}
